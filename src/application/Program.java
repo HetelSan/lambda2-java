@@ -20,7 +20,9 @@ public class Program {
 		list.add(new Product("Tablet", 450.0));
 		list.add(new Product("HD Case", 80.9));
 		
-		Predicate<Product> pred = p -> p.getPrice() >= 100.0;
+		double min = 100.0;
+		
+		Predicate<Product> pred = p -> p.getPrice() >= min;
 		
 		list.removeIf(pred);
 		
