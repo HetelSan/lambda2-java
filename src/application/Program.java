@@ -20,7 +20,7 @@ public class Program {
 		list.add(new Product("Tablet", 450.0));
 		list.add(new Product("HD Case", 80.9));
 		
-		list.removeIf(new ProductPredicate());
+		list.removeIf(Product::staticProductPredicate);
 		
 		for (Product p : list) {
 			System.out.println(p);
